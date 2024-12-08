@@ -38,7 +38,7 @@ createBoardFromListUtil(List, N, RetBoardAcc) :-
 movePieceUtil(OuterZ, InnerZ, Elem, ColIdx, RetOZ) :-
     set_current(InnerZ, 0, ElemOverwrittenIZ),
     set_current(OuterZ, ElemOverwrittenIZ, ElemOverwrittenOZ),
-    
+
     (
         move_left(ElemOverwrittenOZ, MovedOZ);
         move_right(ElemOverwrittenOZ, MovedOZ)
@@ -46,7 +46,7 @@ movePieceUtil(OuterZ, InnerZ, Elem, ColIdx, RetOZ) :-
     current(MovedOZ, EmptySlotRowInitIZ),
 
     compose(ColIdx, move_right, EmptySlotRowInitIZ, EmptySlotRowIZ),
-    
+
     current(EmptySlotRowIZ, 0),
 
     set_current(EmptySlotRowIZ, Elem, EmptySlotRowOverwrittenIZ),
@@ -97,7 +97,7 @@ transposeRight(IZ, RetIZ) :- transposeHorizontal(move_right, IZ, RetIZ).
 transposeVertical(MovePred, OZ, RetOZ) :-
     current(OZ, IZ),
     current(IZ, E1),
-    
+
     call(MovePred, OZ, PeekOZ),
     current(PeekOZ, UnalignedNextIZ),
     align(IZ, UnalignedNextIZ, NextIZ),

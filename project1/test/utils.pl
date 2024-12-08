@@ -14,7 +14,7 @@ incr(X, Y) :- Y is X+1.
 ?- iota(20, 10, []).
 
 % take
-?- 
+?-
     iota(1, 7, L),
 
     take(L, 0, [], L),

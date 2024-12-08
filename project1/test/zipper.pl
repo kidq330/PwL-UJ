@@ -13,7 +13,7 @@
     current(Zsh3, 4),
     move_right(Zsh3, Zsh4),
     current(Zsh4, 5),
-    
+
     move_left(Zsh4, Zsh3),
     move_left(Zsh3, Zsh2),
     move_left(Zsh2, Zsh1),

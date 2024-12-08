@@ -1,9 +1,9 @@
 :- consult([puzzle, zipper]).
 
-% createBoard(+N, -B) 
+% createBoard(+N, -B)
 createBoard(N, RetBoard) :- createBoard(N, 1, RetBoard).
 
-% createBoardFromList(+N, +L, -B) 
+% createBoardFromList(+N, +L, -B)
 createBoardFromList(N, List, RetBoard) :-
     NSquared is N*N,
     length(List, NSquared),
@@ -53,4 +53,3 @@ moveBlankVert(_N, BoardIn, K, BoardOut) :-
     compose(AbsK, TransposePred, ZeroOZ, ModOZ),
     to_matrix(ModOZ, BoardOut).
 
-    
